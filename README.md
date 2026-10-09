@@ -1,6 +1,6 @@
 # Segmentação de clientes de e-commerce (Olist)
 
-> 🚧 **Em andamento:** SQL, EDA e Machine Learning concluídos; deep learning, IA generativa e painel em construção. Projeto de ponta a ponta, não supervisionado, seguindo o CRISP-DM.
+> 🚧 **Em andamento:** SQL, EDA, Machine Learning, Deep Learning e IA generativa concluídos; painel no Tableau em construção. Projeto de ponta a ponta, não supervisionado, seguindo o CRISP-DM.
 
 **Cliente (cenário):** marketplace de e-commerce brasileiro.
 **Pergunta de negócio:** que perfis de clientes existem e como o CRM deve falar com cada um?
@@ -13,14 +13,16 @@
 | Entender os dados com SQL | [00 · carga](notebooks/00_setup_carga_sql.ipynb) · [01 · perguntas de negócio](notebooks/01_sql_perguntas_negocio.ipynb) | ✅ |
 | Análise exploratória | [02 · EDA](notebooks/02_eda.ipynb) | ✅ |
 | Modelagem (Machine Learning) | [03 · RFM + K-Means](notebooks/03_segmentacao_kmeans.ipynb) | ✅ |
-| Modelagem (Deep Learning) | [04 · autoencoder](notebooks/04_deep_learning_autoencoder.ipynb) | ⏳ |
-| IA generativa | [05 · personas a partir dos comentários](notebooks/05_ia_generativa_personas.ipynb) | ⏳ |
-| Implantação | [06 · dados para o Tableau](notebooks/06_exportar_tableau.ipynb) · painel no Tableau Public | ⏳ |
+| Modelagem (Deep Learning) | [04 · autoencoder](notebooks/04_deep_learning_autoencoder.ipynb) | ✅ |
+| IA generativa | [05 · personas a partir dos comentários](notebooks/05_ia_generativa_personas.ipynb) | ✅ |
+| Implantação | [06 · dados para o Tableau](notebooks/06_exportar_tableau.ipynb) ✅ · painel no Tableau Public | ⏳ |
 
 ## Resultados até aqui
 - **Retenção é o maior desafio:** só 3,0% dos clientes compraram mais de uma vez, e menos de 1% de cada coorte volta no mês seguinte.
 - **Atraso derruba a satisfação:** a nota média cai de 4,29 (no prazo) para 1,70 (mais de 7 dias de atraso).
 - **4 segmentos com K-Means:** o segmento *Alto valor* reúne 29,8% dos clientes e 57,5% da receita, mas quase todos com compra única. Converter esse grupo na 2ª compra é a principal alavanca de CRM.
+- **Deep learning não superou o K-Means:** o autoencoder isolou bem os recorrentes, mas misturou inativos e novos clientes (ARI 0,299). Com poucas variáveis, o modelo mais simples é o mais útil.
+- **IA generativa com revisão humana:** o Gemini resumiu 320 comentários e confirmou que a logística é o tema central da satisfação, mas gerou mensagens de CRM genéricas, que precisaram de revisão.
 
 ## Dados
 [Brazilian E-Commerce Public Dataset by Olist](https://github.com/olist/work-at-olist-data): 9 tabelas, cerca de 99 mil pedidos (2016–2018). Licença MIT, © 2019 Olist. Os arquivos não ficam neste repositório: o notebook 00 baixa direto da fonte oficial.
