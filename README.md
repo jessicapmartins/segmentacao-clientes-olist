@@ -37,4 +37,4 @@
 2. Siga os notebooks na ordem.
 
 ---
-**Autora:** Jéssica Priscila de Oliveira Martins · [LinkedIn](https://www.linkedin.com/in/jessica-oliveira-martins/) · [Portfólio](https://claude.ai/artifact/YPyaaqo16QuwKBKGw9VF5m)
+**Autora:** Jéssica Priscila de Oliveira Martins · [LinkedIn](https://www.linkedin.com/in/jessica-oliveira-martins/) · [Portfólio](https://portfolio-jessica-martins.vercel.app/)
