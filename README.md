@@ -1,6 +1,6 @@
 # Segmentação de clientes de e-commerce (Olist)
 
-> 🚧 **Em andamento:** SQL, EDA, Machine Learning, Deep Learning e IA generativa concluídos; painel no Tableau em construção. Projeto de ponta a ponta, não supervisionado, seguindo o CRISP-DM.
+> ✅ **Concluído.** Projeto de ponta a ponta, não supervisionado, seguindo o CRISP-DM: SQL → EDA → Machine Learning → Deep Learning → IA generativa → painel no Tableau.
 
 **Cliente (cenário):** marketplace de e-commerce brasileiro.
 **Pergunta de negócio:** que perfis de clientes existem e como o CRM deve falar com cada um?
@@ -15,9 +15,14 @@
 | Modelagem (Machine Learning) | [03 · RFM + K-Means](notebooks/03_segmentacao_kmeans.ipynb) | ✅ |
 | Modelagem (Deep Learning) | [04 · autoencoder](notebooks/04_deep_learning_autoencoder.ipynb) | ✅ |
 | IA generativa | [05 · personas a partir dos comentários](notebooks/05_ia_generativa_personas.ipynb) | ✅ |
-| Implantação | [06 · dados para o Tableau](notebooks/06_exportar_tableau.ipynb) ✅ · painel no Tableau Public | ⏳ |
+| Implantação | [06 · dados para o Tableau](notebooks/06_exportar_tableau.ipynb) · [painel no Tableau Public](https://public.tableau.com/views/Dash-Olist/PainelOlist-Segmentaodeclientes) | ✅ |
 
-## Resultados até aqui
+## Painel interativo
+[![Painel de segmentação de clientes no Tableau Public](https://public.tableau.com/static/images/Da/Dash-Olist/PainelOlist-Segmentaodeclientes/1.png)](https://public.tableau.com/views/Dash-Olist/PainelOlist-Segmentaodeclientes)
+
+🔗 [Abrir no Tableau Public](https://public.tableau.com/views/Dash-Olist/PainelOlist-Segmentaodeclientes): KPIs, participação por segmento, mapa de receita, receita mensal e ação de CRM por segmento, com filtros de segmento e estado.
+
+## Principais resultados
 - **Retenção é o maior desafio:** só 3,0% dos clientes compraram mais de uma vez, e menos de 1% de cada coorte volta no mês seguinte.
 - **Atraso derruba a satisfação:** a nota média cai de 4,29 (no prazo) para 1,70 (mais de 7 dias de atraso).
 - **4 segmentos com K-Means:** o segmento *Alto valor* reúne 29,8% dos clientes e 57,5% da receita, mas quase todos com compra única. Converter esse grupo na 2ª compra é a principal alavanca de CRM.
